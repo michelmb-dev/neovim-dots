@@ -1,4 +1,10 @@
-# 💤 LazyVim
+# My config Neovim 2024
+---
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+## 💤 installation of LazyVim
+
+- Starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+- Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+- Installation of **ripgrep** & **fd** on system.
+
+
