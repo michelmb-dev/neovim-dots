@@ -168,6 +168,18 @@ return {
             bold = true,
             italic = true,
           },
+          modified = {
+            fg = colors.peach,
+            bg = colors.surface0,
+          },
+          modified_visible = {
+            fg = colors.peach,
+            bg = colors.surface2,
+          },
+          modified_selected = {
+            fg = colors.green,
+            bg = colors.surface2,
+          },
         },
       }
     end,
