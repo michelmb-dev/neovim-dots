@@ -116,4 +116,60 @@ return {
       })
     end,
   },
+
+  -- bufferline
+  -- https://github.com/akinsho/bufferline.nvim
+  {
+    "akinsho/bufferline.nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+      "catppuccin",
+    },
+    after = "catppuccin",
+    event = "VeryLazy",
+    keys = {
+      { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
+      { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
+    },
+    opts = function()
+      local colors = require("catppuccin.palettes").get_palette("mocha")
+      return {
+        options = {
+          mode = "buffers",
+          separator_style = "slant",
+          show_buffer_close_icons = false,
+          show_close_icon = false,
+          always_show_bufferline = true,
+        },
+        highlights = {
+          fill = { bg = colors.surface1 },
+          background = { bg = colors.surface0 },
+          separator = {
+            fg = colors.surface1,
+            bg = colors.surface0,
+          },
+          separator_visible = {
+            fg = colors.surface1,
+            bg = colors.surface2,
+          },
+          separator_selected = {
+            fg = colors.surface1,
+            bg = colors.surface2,
+          },
+          buffer_visible = {
+            fg = colors.green,
+            bg = colors.surface2,
+            bold = true,
+            italic = true,
+          },
+          buffer_selected = {
+            fg = colors.lavender,
+            bg = colors.surface2,
+            bold = true,
+            italic = true,
+          },
+        },
+      }
+    end,
+  },
 }
