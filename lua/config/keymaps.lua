@@ -5,8 +5,6 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
-map("n", "+", "<C-a>", { desc = "Increment" })
-map("n", "-", "<C-x>", { desc = "Decrement" })
 map("n", "dw", 'vb"_d', { desc = "Delete a word backwards" })
 map("n", "A", "gg<S-v>G", { desc = "Select all" })
 map("n", "te", ":tabedit<CR>", { noremap = true, silent = true, desc = "New tab" })
