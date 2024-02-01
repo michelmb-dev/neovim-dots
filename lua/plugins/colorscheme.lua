@@ -7,8 +7,6 @@ return {
       transparent_background = true,
       flavour = "mocha",
       integrations = {
-        aerial = true,
-        alpha = true,
         cmp = true,
         dashboard = true,
         flash = true,
@@ -30,8 +28,6 @@ return {
             information = { "undercurl" },
           },
         },
-        navic = { enabled = true, custom_bg = "lualine" },
-        neotest = true,
         neotree = true,
         noice = true,
         notify = true,
