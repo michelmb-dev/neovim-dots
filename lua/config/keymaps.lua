@@ -14,10 +14,13 @@ map("n", "ss", ":split<CR>", opts)
 map("n", "sv", ":vsplit<CR>", opts)
 
 -- Move lines selected
-map("v", "J", ">+1<CR>gv=gv", { noremap = true, silent = true, desc = "Move line to up" })
-map("v", "K", "<-2<CR>gv=gv", { noremap = true, silent = true, desc = "Move line to down" })
+map("v", "<A-k>", ":m <-2<CR>gv=gv", { noremap = true, silent = true, desc = "Move line to up" })
+map("v", "<A-J>", ":m >+1<CR>gv=gv", { noremap = true, silent = true, desc = "Move line to down" })
 
+-- Easy exit insert mode
+map({ "i", "v" }, "jj", "<ESC>")
 -- Diagnostics
+
 map("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)

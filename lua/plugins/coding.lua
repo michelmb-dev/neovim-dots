@@ -134,10 +134,12 @@ return {
         }),
 
         -- Next
-        ["<C-j>"] = cmp.mapping.select_next_item(),
-        ["<C-Down>"] = cmp.mapping(function(fallback)
+        ["<C-Down>"] = cmp.mapping.select_next_item(),
+        ["<C-Right>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_next_item(select_opts)
+          elseif luasnip.expandable() then
+            luasnip.expand()
           elseif luasnip.expand_or_jumpable() then
             luasnip.expand_or_jump()
           elseif has_words_before() then
@@ -148,8 +150,8 @@ return {
         end, { "i", "s" }),
 
         -- Prev
-        ["<C-k>"] = cmp.mapping.select_prev_item(),
-        ["<C-Up>"] = cmp.mapping(function(fallback)
+        ["<C-Up>"] = cmp.mapping.select_prev_item(),
+        ["<C-Left>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_prev_item()
           elseif luasnip.jumpable(-1) then
