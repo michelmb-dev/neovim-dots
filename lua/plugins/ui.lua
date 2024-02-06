@@ -135,7 +135,7 @@ return {
       local colors = require("catppuccin.palettes").get_palette("mocha")
       return {
         options = {
-          mode = "buffers",
+          mode = "tabs",
           separator_style = "slant",
           show_buffer_close_icons = false,
           show_close_icon = false,
