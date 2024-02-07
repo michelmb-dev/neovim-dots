@@ -34,6 +34,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- util
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
+    -- add support dot files (hyrland; rofi ...)
+    { import = "lazyvim.plugins.extras.util.dot" },
     -- import/override with your plugins
     { import = "plugins" },
   },
