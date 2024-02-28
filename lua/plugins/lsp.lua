@@ -24,6 +24,7 @@ return {
         "intelephense",
         "sqlls",
         "yaml-language-server",
+        "twiggy-language-server",
       },
       ui = {
         border = "rounded",
