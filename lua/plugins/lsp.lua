@@ -22,11 +22,9 @@ return {
         "htmx-lsp",
         "json-lsp",
         "intelephense",
-        "phpactor",
         "pint",
         "sqlls",
         "yaml-language-server",
-        -- "twiggy-language-server",
       },
       ui = {
         border = "rounded",
