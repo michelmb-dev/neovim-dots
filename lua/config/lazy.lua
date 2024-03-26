@@ -22,6 +22,8 @@ require("lazy").setup({
     -- linting & formatting
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
+    -- lsp
+    { import = "lazyvim.plugins.extras.lsp.none-ls" },
     -- lang
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.markdown" },

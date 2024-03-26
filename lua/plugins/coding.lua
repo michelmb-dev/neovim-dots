@@ -6,6 +6,24 @@ return {
     config = true,
   },
 
+  {
+    "adalessa/laravel.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "tpope/vim-dotenv",
+      "MunifTanjim/nui.nvim",
+      "nvimtools/none-ls.nvim",
+    },
+    cmd = { "Sail", "Artisan", "Composer", "Npm", "Yarn", "Laravel" },
+    keys = {
+      { "<leader>la", ":Laravel artisan<cr>", silent = true },
+      { "<leader>lr", ":Laravel routes<cr>", silent = true },
+      { "<leader>lm", ":Laravel make<cr>", silent = true },
+    },
+    event = { "VeryLazy" },
+    config = true,
+  },
+
   -- Create annotations with one keybind, and jump your cursor in the inserted annotation
   {
     "danymat/neogen",

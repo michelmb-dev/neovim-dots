@@ -22,6 +22,8 @@ return {
         "htmx-lsp",
         "json-lsp",
         "intelephense",
+        "blade-formatter",
+        "phpstan",
         "pint",
         "sqlls",
         "yaml-language-server",
@@ -53,6 +55,15 @@ return {
             "typescriptreact",
             "php",
             "twig",
+            "blade",
+            "astro",
+            "css",
+            "less",
+            "sass",
+            "scss",
+            "pug",
+            "svelte",
+            "vue",
           },
         },
         tsserver = {
@@ -85,12 +96,6 @@ return {
             },
           },
         },
-        -- twiggy_language_server = {
-        --   root_dir = function(...)
-        --     return require("lspconfig.util").root_pattern("composer.json", ".git")(...)
-        --   end,
-        --   single_file_support = true,
-        -- },
         html = {
           filetypes = { "html", "templ", "twig" },
         },
@@ -162,6 +167,18 @@ return {
                   indent_size = "2",
                   continuation_indent_size = "2",
                 },
+              },
+            },
+          },
+        },
+        intelephense = {
+          filetypes = { "php", "blade" },
+          settings = {
+            intelephense = {
+              filetypes = { "php", "blade" },
+              files = {
+                associations = { "*.php", "*.blade.php" }, -- Associating .blade.php files as well
+                maxSize = 5000000,
               },
             },
           },
